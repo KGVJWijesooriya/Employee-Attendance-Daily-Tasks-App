@@ -49,8 +49,13 @@ class _MainNavigationState extends State<MainNavigation> {
   }
 
   void _simulateError() async {
+    print('Error simulation triggered');
     try {
       ErrorSimulation.triggerError();
+      // If no error is thrown, still show a message
+      setState(() {
+        _errorMessage = 'Error simulation completed.';
+      });
     } catch (e) {
       setState(() {
         _errorMessage = 'Failed to save, please try again.';
@@ -61,6 +66,12 @@ class _MainNavigationState extends State<MainNavigation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: GestureDetector(
+          onLongPress: _simulateError,
+          child: const Text('Employee Attendance & Tasks'),
+        ),
+      ),
       body: Stack(
         children: [
           _screens[_selectedIndex],
