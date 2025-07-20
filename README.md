@@ -73,7 +73,6 @@ A Flutter app for employees to log attendance (Check In/Out) and manage daily ta
 - Attendance and tasks are stored locally; no cloud sync.
 - User can edit their name at any time from the Attendance screen.
 - Bonus: "On Leave" status can be set for any day in history.
-- Error simulation works on both screens via long-press AppBar title.
 
 ## Time Taken
 
