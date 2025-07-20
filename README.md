@@ -64,7 +64,6 @@ A Flutter app for employees to log attendance (Check In/Out) and manage daily ta
    ```
    flutter build apk --release
    # Output: build/app/outputs/flutter-apk/app-release.apk
-   # Rename to AttendanceTasks_YourName_YYYYMMDD.apk as required
    ```
 
 ## Design Choices
